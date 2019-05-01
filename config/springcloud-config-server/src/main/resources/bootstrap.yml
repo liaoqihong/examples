@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          searchLoactions: classpath:/config
+        encrypt:
+          enabled: false
+encrypt: 
+  key: liaoqihong_keyddd
