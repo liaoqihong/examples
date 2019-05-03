@@ -1,0 +1,17 @@
+server:
+  port: 8883
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.example.com:8201/examples-group/springcloud-config.git
+          search-paths: config-repo
+          username: root
+          password: liaoqihong
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/,http://localhost:8001/eureka/
