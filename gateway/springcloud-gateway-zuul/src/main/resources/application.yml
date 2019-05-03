@@ -1,0 +1,40 @@
+zuul:
+  ignored-services: 'spring-cloud-eureka'
+  -- prefix: /api
+  routes:
+    springcloud-gateway-producer: /producer1/**
+      
+    route2:
+      path: /producer2/**
+      serviceId: springcloud-gateway-producer
+      
+    route3:
+      path: /producer3/**
+
+    route4:
+      path: /producer4/**
+      serviceId: route4ServiceId
+      
+    route5:
+      path: /producer5/**
+      url: springcloud-gateway-producer
+      
+    route6:
+      path: /producer6/**
+      url: http://www.baidu.com
+      
+--ribbon:
+--  eureka:
+--    enabled: false
+    
+route3:
+  ribbon:
+    listOfServers: 
+      http://tieba.baidu.com,http://www.baidu.com
+
+route4ServiceId:
+  ribbon:
+    listOfServers: 
+      http://fanyi.baidu.com,http://news.baidu.com
+      
+      
