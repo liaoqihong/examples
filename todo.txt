@@ -1,0 +1,2 @@
+1、Feign Hystrix fallback 不工作
+2、http://localhost:9999/turbine.stream 一直loading
